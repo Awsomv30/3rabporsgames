@@ -3,7 +3,7 @@ const client = new Discord.Client();
 var prefix = "+";
 client.on('message', message => {
     if (message.content == "+play") {
-        var x = ["DreamKing",
+        var x = ["3RB|PROs",
 "DeathGames",
 "زيرو كنج",
 "أرض الأحلام",
@@ -72,12 +72,12 @@ client.on('message', message => {
 
 client.on('ready', () => {
    console.log(`----------------`);
-      console.log(`Cyhper Script By : DREAM`);
+      console.log(`Cyhper Script By : 3RB|PROs`);
         console.log(`----------------`);
-      console.log(`ON ${client.guilds.size} Servers '     Script By : DREAM ' `);
+      console.log(`ON ${client.guilds.size} Servers '     Script By : 3RB|PROs ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Dream | ${client.guilds.size} ${client.users.size} servers/user`,"http://twitch.tv/YouTube")
+client.user.setGame(`3RB|PROs | ${client.guilds.size} ${client.users.size} servers/user`,"http://twitch.tv/3RB|PROs")
 client.user.setStatus("dnd")
 });
 
