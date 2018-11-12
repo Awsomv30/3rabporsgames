@@ -67,6 +67,159 @@ client.on('message', message => {
 })
 
 client.on('message', message => {
+    if (message.content == "+امثال") {
+        var x = ["أذا ذل رويال فهو ...",
+"الإتحاد ...",
+"الناس سواسية كأسنان ...",
+"ما أشبه الليله",
+"البعد ...",
+"الماء أهون موجود وأعز ...",
+"الهزيمة تحل ...",//////bot by Taino#6004
+"العقل ...",
+"البطنة تزيل ...",
+"اللبيب بالإشارة ...",
+"اخطب لابنتك ولا تخطب ...",
+"أعز من الولد ولد ...",
+"القرد في عين أمه ...",
+"الكتاب يقرأ من ...",
+"آخر الحياة ...",
+"أكرم نفسك عن كل",
+"العز في نواصي",
+];
+        var x2 = ['ذليل',
+        "قوة",
+        "المشط",//////bot by Taino#6004
+        "بالبارحة",
+        "جفاء",
+        "مفقود",
+        "العزيمة",
+        "زينة",
+        "الفطنة",
+        "يفهم",
+        "لابنك",
+        "الولد",
+        "غزال",
+        "عنوانه",
+        "الموت",
+        "دنيء",
+        "الخيل",
+        //////bot by Taino#6004
+       
+       
+       
+        ];
+       
+        var x3 = Math.floor(Math.random()*x.length)
+        message.channel.send(` اكمل المثل التآلي :  __**${x[x3]}**__ ؟
+    لديك 30 ثآنية للإجآبة `).then(msg1=> {
+            var r = message.channel.awaitMessages(msg => msg.content == x2[x3], {
+                maxMatches : 1,
+                time : 30000,
+                errors : ['time']
+            })
+        r.catch(() => {//////bot by Taino#6004
+            return message.channel.send(`:negative_squared_cross_mark: لقد انتهى الوقت ولم يقم أحد بالأجابة بشكل صحيح
+            الإجآبة الصحيحةة هي __**${x2[x3]}**__`)
+        })
+       
+        r.then((collected)=> {
+            message.channel.send(`${collected.first().author} لقد قمت بكتابة الجواب الصحيح بالوقت المناسب  `);
+        })
+        })//////bot by Taino#6004
+    }
+})
+/////////////////////////////
+ 
+ 
+client.on('message', message => {
+if (!points[message.author.id]) points[message.author.id] = {
+    points: 50,
+  };
+if (message.content.startsWith("+عواصم')) {
+    if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
+ 
+const type = require('./3wasem/3wasem.json');
+const item = type[Math.floor(Math.random() * type.length)]; //////bot by Taino#6004
+const filter = response => {
+    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+};
+message.channel.send('**اديك 15 ثاني�� لتوجد العاصمه الصحيحه**').then(msg => {
+    let embed = new Discord.RichEmbed()
+    .setColor('#000000')
+    .setFooter("عواصم  | Legend GaMerZ Bot", 'https://cdn.discordapp.com/avatars/439427357175185408/3eb163b7656922ebc9e90653d50231f1.png?size=2048')
+    .setDescription(`**اكتب عاصمه: ${item.type}**`)
+ 
+    msg.channel.sendEmbed(embed).then(() => {
+        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
+        .then((collected) => {//////bot by Taino#6004
+        message.channel.send(`${collected.first().author} ✅ **الاجابه صحيحه**`);
+ 
+        console.log(`[Typing] ${collected.first().author} typed the word.`);
+            let won = collected.first().author;
+            points[won.id].points++;
+          })//////bot by Taino#6004
+          .catch(collected => {
+            message.channel.send(`:x: **لا يوجد احد كتب الاجابه الصحيحه**`);
+            console.log(`[Typing] ماحد قال الاجابه `);
+          })
+        })
+    })//////bot by Taino#6004
+}
+});
+ 
+//============================ الجيسون
+ 
+[
+    {
+        "type": "العراق",
+        "answers": ["بغداد"]
+    },//////bot by Taino#6004
+    {
+        "type": "مصر",
+        "answers": ["القاهرة"]
+    },
+    {
+        "type": "سوريا",
+        "answers": ["دمشق"]
+    },
+    {//////bot by Taino#6004
+        "type": "السعودية",
+        "answers": ["الرياض"]
+    },
+    {
+        "type": "اليمن",
+        "answers": ["صنعاء"]
+    },
+    {
+        "type": "السودان",
+        "answers": ["الخرطوم"]//////bot by Taino#6004
+    },
+    {
+        "type": "الاردن",
+        "answers": ["عمان"]
+    },
+    {
+        "type": "ليبيا",
+        "answers": ["طرابلس"]
+    },//////bot by Taino#6004
+    {
+        "type": "البحرين",
+        "answers": ["المنامة"]
+    }
+]//////bot by Taino#6004
+/////////////////
+const Discord = require('discord.js');
+const logger = require('winston'); //NOURELDIEN ALPHACODES
+const connect4 = require('./connect4/connect4.js');
+//NOURELDIEN ALPHACODES
+const runningGames = new Map(); //NOURELDIEN ALPHACODES
+// Configure logger settings
+logger.remove(logger.transports.Console);
+logger.add(logger.transports.Console, {
+    colorize: true
+});
+
+client.on('message', message => {
            if (message.content.startsWith("+hack")) {//////bot by Taino#6004
              if (message.author.bot) return
                   message.delete();
