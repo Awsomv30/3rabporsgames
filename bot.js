@@ -206,6 +206,9 @@ const zead = [
    message.channel.sendEmbed(mariam);
   }
 });
+
+////////////////////////////
+
 var cats = [
  
 "https://cdn.discordapp.com/attachments/477840502583066624/489925349480595471/c8458dcb83ef3f51eb67871656460acda8008de1_hq.jpg",
