@@ -197,7 +197,7 @@ const zead = [
    '*** انتظر الجزء الثاني عندما يوصل البوت 100 سيرفر , ساعدني في نشر البوت وادخل هذا السيرفر  ***'
 ];
  client.on('message', message => {
- if (message.content.startsWith('S.مريم')) {//////bot by Taino#6004
+ if (message.content.startsWith('+مريم')) {//////bot by Taino#6004
   var mariam= new Discord.RichEmbed()
   .setTitle("لعبة مريم ..")//////bot by Taino#6004
   .setColor('RANDOM')
