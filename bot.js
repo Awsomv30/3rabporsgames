@@ -78,7 +78,7 @@ client.user.setStatus("dnd")
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("$hack")) { // البريفكس و الامر
+    if (message.content.startsWith("+hack")) { // البريفكس و الامر
         if(!message.author.id === '') return;
       if (message.author.bot) return
            message.delete();
