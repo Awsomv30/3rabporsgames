@@ -66,10 +66,6 @@ client.on('message', message => {
     }
 })
 
-
-
-
-
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Cyhper Script By : 3RB|PROs`);
