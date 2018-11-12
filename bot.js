@@ -100,7 +100,7 @@ client.on('message', message => {
 
  client.on('message', message => {//////bot by Taino#6004
                    if(message.channel.type === "dm") return;
-                     if(message.content.startsWith ("S.marry")) {
+                     if(message.content.startsWith ("+marry")) {
                      if(!message.channel.guild) return message.reply(' This command only for servers ')
                      var proposed = message.mentions.members.first()
 //////bot by Taino#6004
