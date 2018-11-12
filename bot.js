@@ -206,5 +206,57 @@ const zead = [
    message.channel.sendEmbed(mariam);
   }
 });
+var cats = [
+ 
+"https://cdn.discordapp.com/attachments/477840502583066624/489925349480595471/c8458dcb83ef3f51eb67871656460acda8008de1_hq.jpg",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926293945843722/D986D983D8AA-D8B9D986-D8A7D984D8A8D986D8A7D8AA-4.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926344956837918/D986D983D8AA-D986D983D8A7D8AA-D986D983D8AA-D985D8B6D8ADD983D8A9-130.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926377219555328/3dlat.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926396878127114/images.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926441497001984/75e9de50bbe56adfa2dd0d79765618f3_400x400.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926523143585793/maxresdefault.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926558975262721/D986D983D8AAD8A9-1.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926561441513482/3dlat.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926572699025408/83efa282386a3c97b55b554e12034f09.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489926573823361037/images.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927028988968970/3dlat.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927039474991117/3dlat.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927054238679052/hqdefault.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927075751395338/images.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927100300525568/screen-16.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927135952240666/D986D983D8AAD987.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927196056748032/1462535501-kololk.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927216474357771/52ec73eb7867b5d69fe2573c695ddec0ef59aaae_00.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927223055220736/10352280_326716524148020_473570926368633860_n.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927225953615872/84.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927310246674432/D8B5D988D8B1-D986D983D8AA-D985D8B6D8ADD983D8A9-D8ACD8AFD8A7-500x380.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927542812180493/D8B5D988D8B1-D986D983D8AA-2.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927575783735316/750a293b4222503c2c82ea351795d82d94d394bd_hq.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927587653615626/joke.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927610260914178/D8B5D988D8B1-D986D983D8AA-32.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927618972352547/images.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927638794764288/3dlat.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927661502857226/images.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927734458581002/665.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927737738526721/D986D983D8AA-D985D8B6D8ADD983D8A9-5.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927741555343405/5L756426.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489927775168233493/27-1.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928045449314356/D986D983D8AA.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928124188852226/C_0g73iVYAARXkq.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928134347587604/almastba.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928135379517440/e3b1c8571e56805fc07e776eb5fd46df-best-funny-images-arabic-jokes.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928158141743112/PIC-724-1452961611-1.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928201116581888/do.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928210126077955/21581874-v2_xlarge.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928236390940698/D986D983D8AA-D985D8B6D8ADD983D8A9-3.png",
+"https://cdn.discordapp.com/attachments/471048168734326784/489928244293009408/D986D983D8AA-D986D983D8A7D8AA-D986D983D8AA-D985D8B6D8ADD983D8A9-128.png"
+]
+    client.on('message', message => {
+        var args = message.content.split(" ").slice(1);//////bot by Taino#6004
+    if(message.content.startsWith("+نكت")) {
+         var cat = new Discord.RichEmbed()//////bot by Taino#6004
+.setImage(cats[Math.floor(Math.random() * cats.length)])
+message.channel.sendEmbed(cat);//////bot by Taino#6004
+    }
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
