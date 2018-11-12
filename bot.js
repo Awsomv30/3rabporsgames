@@ -98,33 +98,6 @@ client.on('message', message => {
                 }
         });
 
- client.on('message', message => {//////bot by Taino#6004
-                   if(message.channel.type === "dm") return;
-                     if(message.content.startsWith ("+marry")) {
-                     if(!message.channel.guild) return message.reply(' This command only for servers ')
-                     var proposed = message.mentions.members.first()
-//////bot by Taino#6004
-                     if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
-                     if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
-                      if(proposed === message.author) return message.reply(`**خنثى ؟ **`);//////bot by Taino#6004
-                       if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
-                             message.channel.send(`**${proposed}//////bot by Taino#6004
-                بدك تقبلي عرض الزواج من ${message.author}
-                العرض لمدة 10 ثانية
-                اكتب موافقة او لا**`)
-//////bot by Taino#6004
-               const filter = m => m.content.startsWith("موافقة");
-               message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
-               .then(collected =>{//////bot by Taino#6004
-                   message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
-               })//////bot by Taino#6004
-                  .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
-//////bot by Taino#6004
-                  const filte = m => m.content.startsWith("لا");//////bot by Taino#6004
-               message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
-               .then(collected =>{//////bot by Taino#6004
-                  message.channel.send(`**${message.author} تم رفض عرضك**`);
-               })
  client.on('message', message => {
               var args = message.content.split(" ").slice(1);//////bot by Taino#6004
           if(message.content.startsWith('+هل تعلم')) {
@@ -133,4 +106,5 @@ client.on('message', message => {
       message.channel.sendEmbed(cat);
           }//////bot by Taino#6004
       });
+			     
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
