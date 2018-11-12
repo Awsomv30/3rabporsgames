@@ -125,5 +125,12 @@ client.on('message', message => {
                .then(collected =>{//////bot by Taino#6004
                   message.channel.send(`**${message.author} تم رفض عرضك**`);
                })
- 
+ client.on('message', message => {
+              var args = message.content.split(" ").slice(1);//////bot by Taino#6004
+          if(message.content.startsWith('+هل تعلم')) {
+               var cat = new Discord.RichEmbed()
+      .setImage(cats[Math.floor(Math.random() * cats.length)])//////bot by Taino#6004
+      message.channel.sendEmbed(cat);
+          }//////bot by Taino#6004
+      });
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
