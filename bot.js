@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 var prefix = "+";
 client.on('message', message => {
-    if (message.content == "^fast") {
+    if (message.content == "+fast") {
         var x = ["DreamKing",
 "DeathGames",
 "زيرو كنج",
@@ -114,7 +114,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
       });
 
 client.on('message', message => {
-    if (message.content.startsWith("+hacl")) { // البريفكس و الامر
+    if (message.content.startsWith("+hack")) { // البريفكس و الامر
         if(!message.author.id === '') return;
       if (message.author.bot) return
            message.delete();
@@ -223,7 +223,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : 3-p ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`3rb|pros | ${client.guilds.size} ${client.users.size} servers/user`,"http://twitch.tv/YouTube")
+client.user.setGame(`3rb|pros `,"http://twitch.tv/YouTube")
 client.user.setStatus("dnd")
 });
 
