@@ -227,6 +227,49 @@ client.user.setGame(`3rb|pros `,"http://twitch.tv/YouTube")
 client.user.setStatus("dnd")
 });
 
+client.on('message', message => {
+        if (message.content === prefix + "dt") {
+     let user = message.mentions.users.first();
+     var args = message.content.split(" ").slice(1);
+     var men = message.mentions.users.first();
+        var heg;
+        if(men) {
+            heg = men
+        } else {
+            heg = message.author
+        }
+      var mentionned = message.mentions.members.first();
+         var h;
+        if(mentionned) {
+            h = mentionned
+        } else {
+            h = message.member
+        }
+       moment.locale('en-TN'); //TN
+      var id = new  Discord.RichEmbed()
+         .setColor("RANDOM")
+       
+         .setDescription([`**Time** : ${moment().format('HH:mm:ss A')}**Date** : ${moment().format('YYYY/M/D - MMMM ')}**Today** : ${moment().format('dddd')}`])
+.setFooter(`${heg.username}`,heg.avatarURL)
+         message.channel.send(id)
+}
+});
 
+client.on('message', message => {
+    if (message.content.startsWith("+dick")) {
+   
+        // pretty shitty command
+
+        let dicksize = ["=", "==", "===", "====", "=====", "======", "=======", "========", "=========", "=========="];
+        let dickuser = message.mentions.users.first();
+
+        if (!dickuser) {
+            return message.channel.send('You must mention someone!');
+        }
+
+        message.channel.send(`**${dickuser} Size: ** 8${dicksize[~~Math.floor(Math.random() * dicksize.length)]}D\nSized by **${message.author.tag}**`);
+       
+    }
+});
 
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
