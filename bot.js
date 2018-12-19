@@ -329,4 +329,10 @@ client.on('message', message => {
     }
 });
 
+client.on('guildMemberAdd', (member) => {
+    var channel = member.guild.channels.find('_new_friends_', 'اسم الروم');
+channel.send(`@${member.user.tag} تم اعطاء العضو رتبت ممبر`)
+member.addRole(member.guild.roles.find('+_-PROS+_-', 'اسم الرتبة'));
+});
+
 client.login(process.env.BOT_TOKEN);// لا تغير فيها شيء
